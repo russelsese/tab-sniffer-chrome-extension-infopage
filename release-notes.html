@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Release Notes | TabSniffer</title>
+  <meta name="description" content="Release notes for TabSniffer." />
+  <style>
+    :root {
+      --bg: #f4f8ff;
+      --card: #ffffff;
+      --ink: #142238;
+      --muted: #4f627d;
+      --line: #d6e0ec;
+      --brand: #0452c8;
+      --radius: 18px;
+      --shadow: 0 18px 40px rgba(10, 31, 66, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(860px 300px at -120px -60px, #cae7ff 0%, transparent 65%),
+        radial-gradient(620px 300px at 110% 0%, #ffe0c7 0%, transparent 64%),
+        var(--bg);
+      color: var(--ink);
+      font-family: "Space Grotesk", "Avenir Next", "Trebuchet MS", sans-serif;
+      line-height: 1.5;
+    }
+    .wrap { width: min(940px, 92vw); margin: 40px auto 56px; }
+    .top {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fff;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand);
+      background: #e8f2ff;
+      border: 1px solid #bfd9ff;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+    h2 { margin: 22px 0 8px; font-size: 22px; letter-spacing: -0.01em; }
+    p, li { color: var(--muted); margin: 0; font-size: 15px; }
+    ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 8px; }
+    code {
+      font-family: "Consolas", "Courier New", monospace;
+      background: #edf4ff;
+      border: 1px solid #d8e8ff;
+      padding: 1px 4px;
+      border-radius: 6px;
+      color: #143867;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <a class="btn" href="./index.html">Back to Home</a>
+    </div>
+    <section class="card">
+      <span class="badge">Release Notes</span>
+      <h1>Version 1.0.0</h1>
+
+      <h2>Added</h2>
+      <ul>
+        <li>Per-tab network capture page launched from the extension action icon.</li>
+        <li>Request lifecycle visibility for <code>started</code>, <code>completed</code>, and <code>error</code> events.</li>
+        <li>Table columns for method, URL, type, status/error, payload summary, and headers.</li>
+        <li>Global search and per-column filtering.</li>
+        <li>Pause/Play capture control per source tab.</li>
+        <li>Right-click row menu to copy requests as cURL for bash or cmd.</li>
+        <li><code>Clear Records</code> button to clear captured rows for the active tab context.</li>
+        <li><code>Reset Filters</code> button to clear all search/filter inputs.</li>
+        <li><code>Export CSV</code> button to export the currently visible table result.</li>
+        <li>Updated branding and icon set for TabSniffer.</li>
+      </ul>
+
+      <h2>Changed</h2>
+      <ul>
+        <li>UI updated with a modern blue visual theme and improved readability.</li>
+        <li>Toolbar expanded with dedicated controls for clear/reset/export workflows.</li>
+      </ul>
+
+      <h2>Fixed</h2>
+      <ul>
+        <li>Clear flow hardened so stale refresh responses cannot repopulate cleared rows.</li>
+        <li>Clear-records behavior separated from reset-filters behavior.</li>
+      </ul>
+
+      <h2>Notes</h2>
+      <ul>
+        <li>Captured data is scoped to extension runtime behavior and per-tab contexts.</li>
+        <li>Feature set is optimized for quick debugging and request inspection.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

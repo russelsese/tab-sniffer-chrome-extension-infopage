@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy | TabSniffer</title>
+  <meta name="description" content="Privacy policy for TabSniffer Chrome extension." />
+  <style>
+    :root {
+      --bg: #f4f8ff;
+      --card: #ffffff;
+      --ink: #142238;
+      --muted: #4f627d;
+      --line: #d6e0ec;
+      --brand: #0452c8;
+      --radius: 18px;
+      --shadow: 0 18px 40px rgba(10, 31, 66, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(860px 300px at -120px -60px, #cae7ff 0%, transparent 65%),
+        radial-gradient(620px 300px at 110% 0%, #ffe0c7 0%, transparent 64%),
+        var(--bg);
+      color: var(--ink);
+      font-family: "Space Grotesk", "Avenir Next", "Trebuchet MS", sans-serif;
+      line-height: 1.5;
+    }
+    .wrap { width: min(940px, 92vw); margin: 40px auto 56px; }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand);
+      background: #e8f2ff;
+      border: 1px solid #bfd9ff;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .btn {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fff;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 4vw, 48px);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+    .meta { margin: 0 0 18px; color: var(--muted); font-size: 14px; }
+    h2 { margin: 20px 0 8px; font-size: 22px; letter-spacing: -0.01em; }
+    p, li { color: var(--muted); margin: 0; font-size: 15px; }
+    ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 8px; }
+    a { color: var(--brand); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <span class="badge">Privacy Policy</span>
+      <a class="btn" href="./index.html">Back to Home</a>
+    </div>
+
+    <section class="card">
+      <h1>TabSniffer Privacy Policy</h1>
+      <p class="meta"><strong>Effective date:</strong> March 7, 2026</p>
+
+      <p>This privacy policy describes how TabSniffer handles data when you use the extension.</p>
+
+      <h2>1. What the extension does</h2>
+      <p>TabSniffer captures and displays network activity for the browser tab you launch it from, including request lifecycle events, payload summaries, and headers when available.</p>
+
+      <h2>2. Data handling model</h2>
+      <ul>
+        <li>Captured request records are handled in extension runtime memory.</li>
+        <li>Records are scoped per tab for the active extension session.</li>
+        <li>The extension provides tools to clear records and export visible rows to CSV.</li>
+      </ul>
+
+      <h2>3. Data we do not collect or sell</h2>
+      <ul>
+        <li>We do not sell personal information.</li>
+        <li>We do not require account sign-in.</li>
+        <li>We do not intentionally transmit captured logs to a remote backend service.</li>
+      </ul>
+
+      <h2>4. Permissions and why they are needed</h2>
+      <ul>
+        <li><code>tabs</code>: Open and associate the sniffer page with the source tab.</li>
+        <li><code>webRequest</code>: Observe request lifecycle events and metadata.</li>
+        <li><code>&lt;all_urls&gt;</code> host permission: Required to observe requests across sites when you use the extension.</li>
+      </ul>
+
+      <h2>5. User controls</h2>
+      <ul>
+        <li>Pause/Play capture for a tab.</li>
+        <li>Clear records for a tab.</li>
+        <li>Reset filters/search fields.</li>
+        <li>Export visible table rows to CSV.</li>
+      </ul>
+
+      <h2>6. Data retention and control</h2>
+      <p>You can clear displayed records directly from the UI. Closing tabs or removing the extension may clear extension-managed runtime data according to browser behavior.</p>
+
+      <h2>7. Policy alignment</h2>
+      <p>This policy is intended to align with Chrome Web Store transparency and disclosure expectations.</p>
+
+      <h2>8. Contact</h2>
+      <p>Developer: Russel Sese<br />LinkedIn: <a href="https://www.linkedin.com/in/russelsese/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/russelsese/</a></p>
+
+      <h2>9. Updates to this policy</h2>
+      <p>This page may be updated when extension behavior or compliance requirements change. The effective date above will be updated accordingly.</p>
+    </section>
+  </main>
+</body>
+</html>
